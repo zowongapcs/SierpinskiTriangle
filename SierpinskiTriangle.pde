@@ -1,8 +1,8 @@
-public int j = 255;
-public int z = 255;
-public int i = 70;
-public int k = 180;
-public int w = 125;
+public int greenBlue = 255;
+public int red = 255;
+public int X = 70;
+public int Y = 180;
+public int Len = 125;
 public void setup()
 {
   size(1000,680);
@@ -10,32 +10,32 @@ public void setup()
 }
 public void draw()
 {
-  fill(z,j,j, 10);
-  stroke(z,j,j);
-  if(j>0){
-    j--;
-  }else if(j==0){
-    z--;
+  fill(red,greenBlue,greenBlue, 10);
+  stroke(red,greenBlue,greenBlue);
+  if(greenBlue>0){
+    greenBlue--;
+  }else if(greenBlue==0){
+    red--;
   }
-  sierpinski(i,k,w);
+  sierpinski(X,Y,Len);
 }
 public void mouseDragged()//optional
 {
-  i = mouseX;
-  k = mouseY;
-  w = (mouseX + mouseY)/2;
+  X = mouseX;
+  Y = mouseY;
+  Len = (mouseX + mouseY)/2;
 }
 public void mouseClicked()
 {
-  i = mouseX;
-  k = mouseY;
-  w = (mouseX + mouseY)/2;
+  X = mouseX;
+  Y = mouseY;
+  Len = (mouseX + mouseY)/2;
   background(32,28,112);
 }
 public void keyPressed()
 {
-  j = 255;
-  z = 255;
+  greenBlue = 255;
+  red = 255;
 }
 public void sierpinski(int x, int y, int len) 
 {
